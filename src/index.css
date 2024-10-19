@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+
+.App_Layout {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 1300px) {
+  .App_Layout {
+    flex-direction: column; /* Stack Profile, Main, and Header vertically */
+    align-items: center;
+  }
+
+  .Main_Wrapper {
+    width: 100%; /* Make Main and Header take up full width */
+    padding: 20px;
+  }
+
+  .ProfileWrapper {
+    width: 100%; /* Make Profile take up full width */
+    max-width: 360px; /* Limit width if needed */
+    margin-bottom: 20px; /* Add some space between Profile and Main_Wrapper */
+  }
+}
+
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   height: auto;
+
+   list-style: none;
+   text-decoration: none;
+
+   font-family: 'syne';
+}
+
+:root{
+  --bg-color: #e6ebf4;
+  --border-color: rgba(0,0,0,0.05);
+  --text-color:#1e1e1e;
+  --background-button:linear-gradient(135deg ,#aa70e0 ,#7059e2);
+  --gradient-text:-webkit-linear-gradient(15deg , #8756cc , #5d4ec4);
+  --button-color:#fff;
+  --Profile-bg-color:#ebf0f7;
+  --bg-black:#000;
+
+}
+[data-theme='Dark'] {
+  --bg-color: #111111;
+  --border-color: rgba(255, 255, 255, 0.2);;
+  --text-color: #e6ebf4;
+  --background-button: linear-gradient(135deg, #aa70e0, #7059e2);
+  --button-color: #1e1e1e;
+  --gradient-text:-webkit-linear-gradient(15deg , #8756cc , #5d4ec4);
+  --Profile-bg-color:#191818;
+  --bg-black:#fff;
+}
+
+body{
+  background-color: var(--bg-color);
+  width: screen;
+  height: auto;
+
+}
+
+button{
+  height: 45px;
+  width: 160px;
+  border: none;
+  font-size: 16px;
+  color: var(--button-color);
+  background:var(--background-button) ;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: .6s;
+}
+
+button:hover{
+  transform: scale(1.05);
+}
+
+
+.Main_Wrapper {
+  margin-left: 400px; /* Add enough margin to prevent overlap with the profile */
+  width: calc(100% - 400px); /* Ensure the Main content takes up remaining space */
+  padding: 50px;
+}
+
+@media screen and (max-width:1100px){
+  .Main_Wrapper{
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.section{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  
+}
+
+sectionheading{
+  font-size: 16px;
+  display: flex;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 0.5px solid var(--border-color);
+  color: var(--text-color);
+  width: fit-content;
+  border-radius: 30px;
+}
+
+.section_Title{
+  font-size: 80px;
+  line-height: 85px;
+  margin: 20px 0;
+  font-weight: 700;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width:1300px){
+  .section_Title{
+    font-size:65px;
+    line-height: 70px;
+  }
+}
+
+@media screen and (max-width:1100px){
+  .section_Title{
+    margin-left:0%;
+    line-height: 55px;
+  }
+}
+
+@media screen and (max-width:768px){
+  .section_Title{
+    font-size:30px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .App_Layout {
+    grid-template-columns: 1fr; /* Stack them on top of each other on small screens */
+    grid-template-rows: auto auto; /* Adjust rows for the mobile layout */
+  }}

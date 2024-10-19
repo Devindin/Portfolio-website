@@ -1,0 +1,55 @@
+.Portfoliowrapper {
+    margin-top: 80px;
+    color: var(--text-color);
+  }
+  
+  .portfoliocards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    
+  }
+  
+  .portfoliocards .card {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+   
+  }
+  
+  .portfoliocards .card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .portfoliocards .card .tags{
+    position: absolute;
+    bottom: -40%;
+    left:5%;
+    transition: .6s;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    
+    
+  }
+
+  .portfoliocards .card:hover .tags{
+   
+    bottom: 5%;
+    
+  }
+
+  .portfoliocards .card:hover .tags span{
+    padding: 5px 12px;
+    background-color: var(--bg-black);
+    border-radius: 30px;
+    color: var(--button-color);
+  }
+
+  @media screen and (max-width:500px){
+    .portfoliocards {
+        grid-template-columns: repeat(1, 1fr);
+      }
+  }

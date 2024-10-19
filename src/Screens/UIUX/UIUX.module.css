@@ -1,0 +1,30 @@
+.Projectwrapper {
+    color: var(--text-color);
+  }
+  
+  .projectcards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    
+  }
+  
+  .projectcards .card {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+   
+  }
+  
+  .projectcards .card video{
+    width: 100%;
+    border-radius: 8px;
+  }
+
+
+  @media screen and (max-width:500px){
+    .projectcards {
+        grid-template-columns: repeat(1, 1fr);
+      }
+  }

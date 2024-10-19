@@ -1,0 +1,71 @@
+.HeaderWrapper{
+    min-height: 60vh;
+    justify-content: end;
+    gap: 50px;
+}
+
+.HeaderWrapper h1 {
+    font-size: 70px;
+    font-weight: 700;
+    background: var(--gradient-text); /* Apply the gradient */
+    -webkit-background-clip: text; /* Clip background to the text */
+    background-clip: text; /* Ensure it's also applied for non-webkit browsers */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show the gradient */
+    text-fill-color: transparent; /* For non-webkit browsers */
+    line-height: 85px;
+}
+
+.HeaderWrapper h3{
+  color: var(--text-color);
+}
+
+.HeaderWrapper .header_btns{
+    display: flex;
+    gap:20px;
+}
+
+.HeaderWrapper .header_btns button{
+    background: transparent;
+    border:0.5px solid var(--border-color);
+    color:var(--text-color);
+    display: flex;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+}
+
+.HeaderWrapper .header_btns button:nth-of-type(2){
+    width: 180px;
+}
+
+@media screen and (max-width:1300px){
+    .HeaderWrapper h1{
+        font-size:55px;
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .HeaderWrapper{
+        justify-content: start;
+    }
+}
+
+@media screen and (max-width:768px){
+    .HeaderWrapper h1{
+        font-size:45px;
+        line-height: 55px;
+    }
+}
+
+@media screen and (max-width:545px){
+    .HeaderWrapper h1{
+        font-size:30px;
+        line-height: 40px;
+    }
+}
+    
+
+
+

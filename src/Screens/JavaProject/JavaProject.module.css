@@ -1,0 +1,38 @@
+.Projectwrapper {
+    color: var(--text-color);
+  }
+  .projectcards h2 {
+    font-size: 2rem; /* Adjust font size as needed */
+    background: linear-gradient(15deg, #8756cc, #5d4ec4);
+    background-clip: text; /* Fallback for non-webkit browsers */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text color transparent */
+    display: inline-block; /* Ensures gradient applies correctly */
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+  .projectcards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    
+  }
+  
+  .projectcards .card {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+   
+  }
+  
+  .projectcards .card video{
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  @media screen and (max-width:500px){
+    .projectcards {
+        grid-template-columns: repeat(1, 1fr);
+      }
+  }
